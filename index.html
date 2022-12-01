@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 
 <html>
+  <h1>Hidden Discord Text</h1>
   <textarea
     class="hidden"
     placeholder="Hello**https://youtube.com"
     style="width: 250px; max-width: 250px; height: 200px; min-width: 250px; min-height: 200px; max-height: 200px; vertical-align: top; border-radius: 10px"
   ></textarea>
+
+  <button class="convertHin">Convert</button>
+
+  <textarea
+    class="hiddenp"
+    placeholder="Your paste will appear here"
+    style="width: 250px; max-width: 250px; height: 200px; min-width: 250px; min-height: 200px; max-height: 200px; vertical-align: top; border-radius: 10px"
+    contenteditable="false"
+  ></textarea>
+
+  <br />
+
+  <h1>Discord Edit Glitch</h1>
+  <textarea
+    class="edit"
+    placeholder="This is my (edited) message."
+    style="width: 250px; max-width: 250px; height: 200px; min-width: 250px; min-height: 200px; max-height: 200px; vertical-align: top; border-radius: 10px"
+  ></textarea>
+
+  <button class="convertEd">Convert</button>
+
+  <textarea
+    class="editp"
+    placeholder="Edit Glitch will Appear here"
+    contenteditable="false"
+    style="width: 250px; max-width: 250px; height: 200px; min-width: 250px; min-height: 200px; max-height: 200px; vertical-align: top; border-radius: 10px"
+  ></textarea>
+
+  <script>
+    let hiddenInput = document.getElementsByClassName("hidden")[0];
+    let hiddenP = document.getElementsByClassName("hiddenp")[0];
+    let editInput = document.getElementsByClassName("edit")[0];
+    let editP = document.getElementsByClassName("editp")[0];
+    let conHid = document.getElementsByClassName("convertHin")[0];
+    let conEd = document.getElementsByClassName("convertEd")[0];
+    let text = document.getElementsByClassName("hidden").value;
+
+    const editSym = "‫";
+    const hiddenSym =
+      "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _ ";
+
+    function hiddenEditor() {
+      let content = hiddenInput.value.replace("**", hiddenSym);
+      hiddenP.value = content;
+    }
+
+    function editEditor() {
+      let content = editInput.value.replace("(edited)", editSym);
+      editP.value = content;
+    }
+
+    conHid.addEventListener("click", hiddenEditor);
+    conEd.addEventListener("click", editEditor);
+  </script>
 </html>
