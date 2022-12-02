@@ -14,6 +14,18 @@ function hiddenEditor() {
   hiddenP.value = content;
 }
 
+function copyData(e) {
+  let a = document.getElementsByClassName(e)[0];
+  navigator.clipboard
+    .writeText(a.value)
+    .then(() => {
+      print("Successfully copied: " + a.value);
+    })
+    .catch((e) => {
+      alert("Error occured copying, please contact over Vermin1ty#0224 on Discord\nERROR: " + e);
+    });
+}
+
 function editEditor() {
   let content = editInput.value.replace("(edited)", editSym);
   editP.value = content;
