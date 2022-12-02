@@ -12,6 +12,19 @@
         margin-top: 20px;
         border-radius: 20px;
       }
+
+      .editedMsg {
+        color: lightgray;
+      }
+
+      .hiddenMsg {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      /* .hiddenMsg:hover {
+        color: #000;
+        color: rgba(0, 0, 0, 1);
+      } */
     </style>
     <title>RemGens (Generators)</title>
     <meta content="Rem Generators" property="og:title" />
@@ -22,7 +35,7 @@
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
   </head>
   <body style="background-color: rgba(88, 101, 242, 255)">
-    <h1 style="font-family: 'Courier New', Courier, monospace; width: 100%; text-align: center; font-size: 50px">Hidden Discord Text</h1>
+    <h1 style="font-family: 'Courier New', Courier, monospace; width: 100%; text-align: center; font-size: 50px"><span class="hiddenMsg" role="button">Hidden</span> Discord Text</h1>
     <div class="background-style">
       <textarea
         class="hidden"
@@ -43,8 +56,8 @@
       ></textarea>
 
       <div style="width: 205px">
-        <button class="convertHin" style="border-width: 0px; border-radius: 20px; margin-top: 50px; width: 205px; height: 50px">Convert</button>
-        <button class="copyHin" onclick="copy('hiddenp');" style="border-width: 0px; margin-top: 50px; border-radius: 20px; width: 205px; height: 50px">Copy Text</button>
+        <button class="convertHin" style="font-size: 30px; border-width: 5px; border-radius: 20px; margin-top: 50px; width: 205px; height: 50px">Convert</button>
+        <button class="copyHin" onclick="copyData('hiddenp');" style="font-size: 30px; border-width: 5px; margin-top: 50px; border-radius: 20px; width: 205px; height: 50px">Copy Text</button>
       </div>
       <textarea
         class="hiddenp"
@@ -66,7 +79,7 @@
       ></textarea>
     </div>
 
-    <h1 style="font-family: 'Courier New', Courier, monospace; width: 100%; text-align: center; font-size: 50px">Discord Edit Glitch</h1>
+    <h1 style="font-family: 'Courier New', Courier, monospace; width: 100%; text-align: center; font-size: 50px">Discord<span class="editedMsg"> (edited) </span>Glitch</h1>
 
     <div class="background-style" style="display: flex; justify-content: center; height: 350px; width: 100%">
       <textarea
@@ -88,8 +101,8 @@
       ></textarea>
 
       <div style="width: 205px">
-        <button class="convertEd" style="border-width: 0px; border-radius: 20px; margin-top: 50px; width: 205px; height: 50px">Convert</button>
-        <button class="copyEd" onclick="copy('editorp');" style="border-width: 0px; margin-top: 50px; border-radius: 20px; width: 205px; height: 50px">Copy Text</button>
+        <button class="convertEd" style="font-size: 30px; border-width: 5px; border-radius: 20px; margin-top: 50px; width: 205px; height: 50px">Convert</button>
+        <button class="copyEd" onclick="copyData('editorp');" style="font-size: 30px; border-width: 5px; margin-top: 50px; border-radius: 20px; width: 205px; height: 50px">Copy Text</button>
       </div>
 
       <textarea
@@ -112,9 +125,7 @@
       ></textarea>
     </div>
 
-    <h1 style="font-family: 'Courier New', Courier, monospace; width: 100%; text-align: center; margin-top: 120px; font-size: 50px">
-      Discord <code><strong>s/e/x</strong></code> trick.
-    </h1>
+    <h1 style="font-family: 'Courier New', Courier, monospace; width: 100%; text-align: center; margin-top: 120px; font-size: 50px">Discord "s/e/x" trick.</h1>
 
     <div style="display: flex; justify-content: center; height: 200px; width: 100%">
       <span style="font-size: large">Send a <strong>TENOR</strong> gif (has to be tenor) on discord and type <code>s/e/x</code> it'll then edit to OMG DISCORD SEX WTF? image.</span>
