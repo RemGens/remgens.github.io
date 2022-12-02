@@ -20,7 +20,7 @@ function editEditor() {
 }
 
 function copy(classN) {
-  var copyText = document.getElementById(classN);
+  var copyText = document.getElementByClassName(classN)[0];
 
   // Select the text field
   copyText.select();
