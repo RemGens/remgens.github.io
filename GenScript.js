@@ -16,6 +16,10 @@ function hiddenEditor() {
 
 function copyData(e) {
   let a = document.getElementsByClassName(e)[0];
+  
+  a.select();
+  a.setSelectionRange(0, 99999); // For mobile devices
+  
   navigator.clipboard
     .writeText(a.value)
     .then(() => {
@@ -29,17 +33,6 @@ function copyData(e) {
 function editEditor() {
   let content = editInput.value.replace("(edited)", editSym);
   editP.value = content;
-}
-
-function copy(classN) {
-  var copyText = document.getElementByClassName(classN)[0];
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
 }
 
 conHid.addEventListener("click", hiddenEditor);
