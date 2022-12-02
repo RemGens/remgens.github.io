@@ -19,15 +19,6 @@ function copyData(e) {
   
   a.select();
   a.setSelectionRange(0, 99999); // For mobile devices
-  
-  navigator.clipboard
-    .writeText(a.value)
-    .then(() => {
-      print("Successfully copied: " + a.value);
-    })
-    .catch((e) => {
-      alert("Error occured copying, please contact over Vermin1ty#0224 on Discord\nERROR: " + e);
-    });
 }
 
 function editEditor() {
