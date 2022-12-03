@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <style>
+      .titlee {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;s
+      }
+
+      .data {
+        position: absolute;
+        top: 400px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <title>sex :3</title>
+  </head>
+  <body style="display: flex; justify-content: center">
+    <h1 class="titlee">Try out s/e/x off Discord.</h1>
+    <img id="imageSex" src="./Cat.gif" style="position: absolute; top: 100px; height: 250px" id="editHere" />
+    <input id="inputBox" style="position: absolute; top: 350px" placeholder="Insert Command Here." />
+    <span class="data"
+      >Run the command <strong>s/e/x</strong> for it to go to the first sex gif. <br />
+      Run <strong>s/e/x</strong> again to make it the second. <br />
+      To reset the gif at any time run <strong>reset</strong> <br />
+      Currently there is no gamemodes implimented yet.</span
+    >
+
+    <script>
+      const box = document.getElementById("inputBox");
+      const sex = document.getElementById("imageSex");
+
+      let sexCount = 0;
+      box.addEventListener("keyup", function (e) {
+        if (e.which == 13 || e.keyCode == 13) {
+          if (sexCount == 0 && box.value.trim() == "s/e/x") {
+            sex.src = "./Sex1.png";
+            sexCount = 1;
+            box.value = "";
+          } else if (sexCount == 1 && box.value.trim() == "s/e/x") {
+            sex.src = "./Sex2.png";
+            sexCount = 2;
+            box.value = "";
+          } else if (sexCount == 1 && box.value.trim() == "s/x/e") {
+            sex.src = "./Cat.gif";
+            sexCount = 0;
+            box.value = "";
+          } else if (box.value.trim() == "reset") {
+            sex.src = "./Cat.gif";
+            sexCount = 0;
+            box.value = "";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
