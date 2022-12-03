@@ -6,19 +6,19 @@ let isError = false;
 box.addEventListener("keyup", function (e) {
   if (e.which == 13 || e.keyCode == 13) {
     if (sexCount == 0 && box.value.trim() == "s/e/x" && isError == false) {
-      sex.src = "./Sex1.png";
+      sex.src = "./images/Sex1.png";
       sexCount = 1;
       box.value = "";
     } else if (sexCount == 1 && box.value.trim() == "s/e/x" && isError == false) {
-      sex.src = "./Sex2.png";
+      sex.src = "./images/Sex2.png";
       sexCount = 2;
       box.value = "";
     } else if (sexCount == 1 && box.value.trim() == "s/x/e" && isError == false) {
-      sex.src = "./Cat.gif";
+      sex.src = "./images/Cat.gif";
       sexCount = 0;
       box.value = "";
     } else if (box.value.trim() == "reset" && isError == false) {
-      sex.src = "./Cat.gif";
+      sex.src = "./images/Cat.gif";
       sexCount = 0;
       box.value = "";
     } else {
