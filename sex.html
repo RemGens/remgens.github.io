@@ -43,7 +43,7 @@
   <body style="display: flex; justify-content: center; background-color: rgba(88, 101, 242, 255)">
     <h1 class="titlee">Try out s/e/x off Discord.</h1>
     <span style="top: 80px; position: absolute; font-family: Arial, Helvetica, sans-serif">The Gif</span>
-    <img id="imageSex" src="./Cat.gif" id="editHere" />
+    <img id="imageSex" src="./images/Cat.gif" id="editHere" />
     <span style="position: relative; top: 632px; left: -185px; z-index: 50; font-size: 15px; font-weight: bold; font-family: 'Press Start 2P', cursive">></span>
     <input id="inputBox" placeholder="Insert Command Here." />
     <span class="data"
@@ -55,6 +55,44 @@
       Currently there is no gamemodes implimented yet.</span
     >
 
-    <script src="./SexCommand.js"></script>
+    <script>
+      const box = document.getElementById("inputBox");
+      const sex = document.getElementById("imageSex");
+
+      let sexCount = 0;
+      let isError = false;
+      box.addEventListener("keyup", function (e) {
+        if (e.which == 13 || e.keyCode == 13) {
+          if (sexCount == 0 && box.value.trim() == "s/e/x" && isError == false) {
+            sex.src = "./Sex1.png";
+            sexCount = 1;
+            box.value = "";
+          } else if (sexCount == 1 && box.value.trim() == "s/e/x" && isError == false) {
+            sex.src = "./Sex2.png";
+            sexCount = 2;
+            box.value = "";
+          } else if (sexCount == 1 && box.value.trim() == "s/x/e" && isError == false) {
+            sex.src = "./Cat.gif";
+            sexCount = 0;
+            box.value = "";
+          } else if (box.value.trim() == "reset" && isError == false) {
+            sex.src = "./Cat.gif";
+            sexCount = 0;
+            box.value = "";
+          } else {
+            isError = true;
+            box.value = "Not Valid Command";
+            box.style.color = "red";
+            box.readOnly = true;
+            setTimeout(() => {
+              box.value = "";
+              box.readOnly = false;
+              box.style.color = "black";
+              isError = false;
+            }, 1000);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
